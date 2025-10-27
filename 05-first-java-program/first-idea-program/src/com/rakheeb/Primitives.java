@@ -1,4 +1,4 @@
-package com.asim;
+package com.rakheeb;
 
 public class Primitives {
     public static void main(String[] args) {
@@ -10,3 +10,4 @@ public class Primitives {
 //        boolean check = true ;
     }
 }
+
