@@ -1,4 +1,4 @@
-package com.asim;
+package com.rakheeb;
 
 import java.util.Scanner;
 
@@ -12,3 +12,4 @@ public class Sum {
         System.out.println("Sum : "+ sum);
     }
 }
+
