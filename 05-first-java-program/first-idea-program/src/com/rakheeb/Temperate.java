@@ -1,4 +1,4 @@
-package com.asim;
+package com.rakheeb;
 
 import java.util.Scanner;
 
@@ -11,3 +11,4 @@ public class Temperate {
         System.out.println("the temp in fehranite is "+tempF);
     }
 }
+
