@@ -1,4 +1,4 @@
-package rakheeb;
+package asim;
 
 import java.util.Scanner;
 
@@ -35,4 +35,3 @@ public class Loops {
 
     }
 }
-
