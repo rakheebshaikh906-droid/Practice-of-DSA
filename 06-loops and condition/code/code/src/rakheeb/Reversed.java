@@ -1,4 +1,4 @@
-package asim;
+package rakheeb;
 
 import java.util.Scanner;
 
@@ -16,3 +16,4 @@ public class Reversed {
         System.out.println(ans);
     }
 }
+
