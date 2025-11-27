@@ -1,0 +1,382 @@
+## 1. What Are Conditions?
+Conditions are used to make decisions in a program.
+A condition checks whether something is true or false and executes code accordingly.
+
+### Syntax:
+
+```java
+if (condition) {
+    // code
+}
+```
+
+### Example:
+
+```java
+int age = 20;
+if (age >= 18) {
+    System.out.println("Adult");
+}
+```
+
+---
+
+## 2. if-else Statement
+
+Used when you need one condition for true and another for false.
+
+### Syntax:
+
+```java
+if (condition) {
+    // true block
+} else {
+    // false block
+}
+```
+
+### Example:
+
+```java
+int marks = 45;
+if (marks >= 40) {
+    System.out.println("Pass");
+} else {
+    System.out.println("Fail");
+}
+```
+
+---
+
+## 3. else-if Ladder
+
+Used when there are multiple conditions.
+
+### Syntax:
+
+```java
+if (c1) {
+} else if (c2) {
+} else if (c3) {
+} else {
+}
+```
+
+### Example:
+
+```java
+int num = 0;
+if (num > 0) {
+    System.out.println("Positive");
+} else if (num < 0) {
+    System.out.println("Negative");
+} else {
+    System.out.println("Zero");
+}
+```
+
+---
+
+## 4. Nested if
+
+An if statement inside another if.
+
+### Example:
+
+```java
+int age = 25;
+boolean hasID = true;
+
+if (age >= 18) {
+    if (hasID) {
+        System.out.println("Entry allowed");
+    }
+}
+```
+
+---
+
+## 5. switch Case (Better Than Multiple else-if)
+
+Used when checking the same variable for multiple values.
+
+### Syntax:
+
+```java
+switch(value) {
+    case 1:
+        break;
+    case 2:
+        break;
+    default:
+}
+```
+
+### Example:
+
+```java
+int day = 3;
+switch(day) {
+    case 1: System.out.println("Monday"); break;
+    case 2: System.out.println("Tuesday"); break;
+    case 3: System.out.println("Wednesday"); break;
+    default: System.out.println("Invalid");
+}
+```
+
+---
+
+# LOOPS
+
+Loops repeat a block of code multiple times.
+
+There are three main loops in Java:
+
+1. for loop
+2. while loop
+3. do-while loop
+
+---
+
+## 6. for Loop (Most Used)
+
+### Syntax:
+
+```java
+for (initialization; condition; update) {
+    // code
+}
+```
+
+### Example:
+
+```java
+for (int i = 1; i <= 5; i++) {
+    System.out.println(i);
+}
+```
+
+---
+
+## 7. while Loop
+
+Used when number of iterations is unknown.
+
+### Syntax:
+
+```java
+while(condition) {
+    // code
+}
+```
+
+### Example:
+
+```java
+int i = 1;
+while (i <= 5) {
+    System.out.println(i);
+    i++;
+}
+```
+
+---
+
+## 8. do-while Loop
+
+Runs at least once, even if the condition is false.
+
+### Syntax:
+
+```java
+do {
+    // code
+} while(condition);
+```
+
+### Example:
+
+```java
+int i = 1;
+do {
+    System.out.println(i);
+    i++;
+} while (i <= 5);
+```
+
+---
+
+## 9. Enhanced for Loop (for-each)
+
+Used for arrays and collections.
+
+### Example:
+
+```java
+int[] arr = {1, 2, 3};
+for (int num : arr) {
+    System.out.println(num);
+}
+```
+
+---
+
+## 10. Break Statement
+
+Used to stop loops immediately.
+
+### Example:
+
+```java
+for (int i = 1; i <= 10; i++) {
+    if (i == 5) break;
+}
+```
+
+---
+
+## 11. Continue Statement
+
+Skips the current iteration and moves to the next.
+
+### Example:
+
+```java
+for (int i = 1; i <= 5; i++) {
+    if (i == 3) continue;
+    System.out.println(i);
+}
+```
+
+---
+
+# ADVANCED LOOP CONCEPTS
+
+## 12. Nested Loops
+
+One loop inside another.
+
+### Example:
+
+```java
+for (int i = 1; i <= 3; i++) {
+    for (int j = 1; j <= 3; j++) {
+        System.out.println(i + " " + j);
+    }
+}
+```
+
+Used in:
+
+* Pattern printing
+* Matrices
+* 2D arrays
+* Complex DSA logic
+
+---
+
+## 13. Infinite Loops
+
+A loop that never ends.
+
+### Example:
+
+```java
+while (true) {
+}
+```
+
+---
+
+## 14. Loop Time Complexity
+
+Important for interviews.
+
+Examples:
+
+### for loop:
+
+O(n)
+
+### nested loops:
+
+O(n^2)
+
+### loop inside loop inside loop:
+
+O(n^3)
+
+### while loop:
+
+O(n)
+
+### break reduces iterations:
+
+Worst case still O(n)
+
+---
+
+# ADVANCED CONDITIONAL CONCEPTS
+
+## 15. Ternary Operator (Shortcut for if-else)
+
+### Syntax:
+
+```java
+condition ? true_value : false_value;
+```
+
+### Example:
+
+```java
+int age = 18;
+String result = (age >= 18) ? "Adult" : "Minor";
+```
+
+---
+
+## 16. Short Circuit Operators
+
+Used inside conditions.
+
+### Example:
+
+```java
+if (a > 0 && b > 0)
+```
+
+&& → stops when first condition is false
+|| → stops when first condition is true
+
+Used for performance improvement.
+
+---
+
+## 17. Combining Loops and Conditions (DSA Use Cases)
+
+Important DSA tasks using loops + conditions:
+
+1. Count digits
+2. Reverse number
+3. Find prime numbers
+4. Check palindrome
+5. Print patterns
+6. Find maximum/minimum in array
+7. Searching and sorting algorithms
+8. Multiply matrices (nested loops)
+9. Sliding window problems
+
+---
+
+# Quick Revision Notes
+
+1. if, else, else-if → decision making
+2. switch → multi case selection
+3. for, while, do-while → loops
+4. break → exit loop
+5. continue → skip iteration
+6. nested loops → patterns, matrices
+7. ternary operator → short if-else
+8. short-circuit → faster evaluations
+
+
