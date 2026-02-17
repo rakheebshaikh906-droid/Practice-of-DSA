@@ -1,0 +1,169 @@
+1. What is an Array? (Basic)
+
+An array is a collection of elements of the same data type, stored in continuous memory locations.
+
+Example:
+
+int[] arr = {10, 20, 30, 40};
+
+2. Why Do We Use Arrays?
+
+To store multiple values in one variable
+To reduce memory usage
+To access elements using indexing
+To process data easily using loops
+To make algorithms easier to implement (sorting, searching, etc.)
+
+3. Indexing
+
+Array indexing always starts from 0.
+
+For int[] arr = {5, 10, 15}:
+
+arr[0] = 5
+
+arr[1] = 10
+
+arr[2] = 15
+
+4. Array Declaration and Initialization
+Method 1: Declare first, assign later
+int[] arr = new int[5];
+
+Method 2: Declare and assign together
+int[] arr = {1, 2, 3, 4, 5};
+
+5. Basic Array Operations
+Access element:
+arr[2];
+
+Update element:
+arr[1] = 50;
+
+Length of array:
+arr.length;
+
+6. Traversing an Array
+Using normal for loop:
+for(int i = 0; i < arr.length; i++) {
+    System.out.println(arr[i]);
+}
+
+Using for-each loop:
+for(int value : arr) {
+    System.out.println(value);
+}
+
+7. Types of Arrays
+One-dimensional:
+int[] a = new int[5];
+
+Two-dimensional (matrix):
+int[][] matrix = new int[3][3];
+
+Multi-dimensional:
+int[][][] data = new int[2][3][4];
+
+8. Taking Input in Array
+Scanner sc = new Scanner(System.in);
+int[] arr = new int[5];
+
+for(int i = 0; i < arr.length; i++) {
+    arr[i] = sc.nextInt();
+}
+
+9. Advantages of Arrays
+
+Fast access using index (O(1))
+Easy to traverse
+Useful for mathematical and algorithmic problems
+
+10. Disadvantages of Arrays
+
+Fixed size
+Difficult to insert or delete elements (O(n))
+Only same data type allowed
+
+11. Time Complexity of Array Operations
+Operation	Time Complexity
+Access element	O(1)
+Update element	O(1)
+Search element	O(n)
+Insert element	O(n)
+Delete element	O(n)
+12. 2D Array Basics (Medium Level)
+Declaration:
+int[][] arr = new int[3][3];
+
+Accessing element:
+arr[0][1];
+
+Traversing 2D array:
+for(int i = 0; i < arr.length; i++) {
+    for(int j = 0; j < arr[i].length; j++) {
+        System.out.print(arr[i][j] + " ");
+    }
+}
+
+13. Important Array Problems (Medium to Advanced)
+
+Common problems you will see in DSA and interviews:
+
+Find maximum/minimum element
+
+Linear search
+
+Binary search
+
+Reverse an array
+
+Rotate an array
+
+Count frequency of elements
+
+Kadane’s algorithm (maximum subarray sum)
+
+Prefix sum
+
+Sliding window problems
+
+Sorting (Bubble, Selection, QuickSort)
+
+Two-pointer problems
+
+14. Advanced Array Concepts
+1. Two Pointer Technique
+Used for sorted arrays, pair problems, removing duplicates, etc.
+
+2. Prefix Sum Array
+Used to perform fast range-sum queries.
+
+3. Sliding Window
+Used to find maximum or minimum values in a continuous range.
+
+4. Searching Techniques
+Linear search (unsorted arrays)
+Binary search (sorted arrays)
+
+5. Sorting Techniques
+
+Bubble Sort
+Selection Sort
+Insertion Sort
+QuickSort
+MergeSort
+
+6. Dynamic Array
+
+In Java, the dynamic array is implemented using:
+ArrayList
+
+15. Quick Revision Notes
+
+Array stores same type of data
+Index starts from 0
+Stored in continuous memory
+size is fixed
+Fast access (O(1))
+Insertion/deletion is slow (O(n))
+1D, 2D, and multi-dimensional arrays exist
