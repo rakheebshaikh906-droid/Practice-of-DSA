@@ -1,0 +1,18 @@
+package Assigment;
+
+//https://leetcode.com/problems/score-of-a-string/description/
+//3110. Score of a String
+
+public class ScoreOfAString {
+    static void main(String[] args) {
+        String s="hello";
+        System.out.println(scoreOfString(s));
+    }
+    static int scoreOfString(String s) {
+        int count=0;
+        for(int i=0;i<s.length()-1;i++){
+            count+=Math.abs(s.charAt(i)-s.charAt(i+1));
+        }
+        return count;
+    }
+}
