@@ -1,0 +1,16 @@
+/*
+-------------------------------------------------------------
+| Placeholder | Meaning                               | Example       |
+|--------------|----------------------------------------|----------------|
+| %s           | String                                | "Rakheeb"     |
+| %d           | Integer                               | 20             |
+| %f           | Floating point number                 | 87.56          |
+| %.2f         | Floating point with 2 decimal places  | 87.56          |
+| %c           | Character                             | 'A'            |
+| %b           | Boolean                               | true / false   |
+-------------------------------------------------------------
+
+💡 Notes:
+- Use these placeholders with printf() or String.format()
+- %n is also used for a new line (better than \n)
+*/
