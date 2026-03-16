@@ -1,0 +1,210 @@
+1. What is a String?
+
+A String is a sequence of characters.
+In Java, a String is an object, not a primitive data type.
+
+Example:
+
+String name = "Rakheeb";
+
+2. How Strings are Stored
+In Java, Strings are stored in a special memory area called the String Constant Pool (SCP).
+
+Important points:
+When you create a string using " " (double quotes), it goes to SCP.
+Java stores only one copy of each literal.
+If two strings have the same literal, they share the same memory location.
+
+Example:
+
+String s1 = "Hello";
+String s2 = "Hello";  // same reference as s1
+
+3. String is Immutable
+
+Strings cannot be changed after creation.
+Whenever you modify a string, Java creates a new object.
+
+Example:
+
+String s = "Hi";
+s = s + " John";   // creates a new object
+
+
+Reason for immutability:
+
+Security
+Thread safety
+String pool efficiency
+
+4. Ways to Create a String
+Method 1: Using string literal
+String s = "Hello";
+
+Method 2: Using new keyword
+String s = new String("Hello");
+
+Difference:
+
+Literal goes to String Pool
+new keyword creates a new object in heap memory
+
+5. Important String Methods (Beginner Level)
+Length of string
+s.length();
+
+Get character at index
+s.charAt(2);
+
+Check equality
+s1.equals(s2);
+
+Check equality ignoring case
+s1.equalsIgnoreCase(s2);
+
+Convert to uppercase
+s.toUpperCase();
+
+Convert to lowercase
+s.toLowerCase();
+
+Check if empty
+s.isEmpty();
+
+6. Searching in Strings
+Find first index of character
+s.indexOf('a');
+
+Find last index
+s.lastIndexOf('a');
+
+Check if substring exists
+s.contains("abc");
+
+7. Substrings
+Method:
+s.substring(startIndex);
+s.substring(startIndex, endIndex);
+
+
+Example:
+
+String s = "Hello";
+String part = s.substring(1, 4);   // "ell"
+
+8. String Comparison: equals vs ==
+equals()
+
+Compares value.
+
+==
+
+Compares memory address (reference).
+
+Example:
+
+String a = "Hi";
+String b = "Hi";
+System.out.println(a == b);       // true (same SCP reference)
+System.out.println(a.equals(b));  // true
+
+
+But:
+
+String x = new String("Hi");
+String y = new String("Hi");
+System.out.println(x == y);       // false
+System.out.println(x.equals(y));  // true
+
+9. StringBuilder and StringBuffer (Medium Level)
+
+Because Strings are immutable, repeated modifications are slow.
+To fix this, Java provides:
+
+StringBuilder (Not thread-safe, faster)
+StringBuilder sb = new StringBuilder("Hello");
+sb.append(" World");
+
+StringBuffer (Thread-safe, slower)
+StringBuffer sb = new StringBuffer("Hello");
+sb.append(" World");
+
+
+Use StringBuilder for competitive coding and DSA problems.
+
+10. Important StringBuilder Methods
+append()
+insert()
+delete()
+reverse()
+length()
+charAt()
+setCharAt()
+
+
+Example:
+
+StringBuilder sb = new StringBuilder("abcd");
+sb.reverse();    // dcba
+
+11. Splitting Strings
+s.split(" ");
+Example:
+
+String s = "Java is fun";
+String[] arr = s.split(" ");   // ["Java", "is", "fun"]
+
+12. Converting String to char array
+char[] ch = s.toCharArray();
+
+13. String + Time Complexity (Important for Interviews)
+
+Access char at index: O(1)
+equals(): O(n)
+substring(): O(n)
+concat (+ operator): O(n)
+append() in StringBuilder: O(1) amortized
+
+14. Common Interview/String DSA Problems (Medium to Advanced)
+
+Reverse a string
+Check palindrome
+Count vowels/consonants
+Remove duplicates
+Find first non-repeating character
+Longest substring without repeating characters
+Longest palindromic substring
+String compression
+Anagram checking
+Pattern matching (KMP Algorithm, optional advanced)
+
+15. Advanced Concepts (For Strong Understanding)
+1. Interning
+String x = new String("Hello");
+String y = x.intern();
+
+
+This ensures y goes to the String Pool.
+
+2. Why String is final?
+
+So that:
+
+Nobody can override its behavior
+
+String Pool stays safe
+
+Security in applications (passwords, URLs, etc.)
+
+3. String Pool Mechanism
+Literal strings reuse memory instead of creating duplicates.
+
+16. Quick Revision Notes
+
+String is a class, not a primitive.
+Strings are immutable.
+Stored in String Constant Pool when created using " ".
+For fast modifications, use StringBuilder/StringBuffer.
+Use equals() to compare values.
+Common methods: length, charAt, substring, indexOf, startsWith, endsWith.
+Important interview topics: palindrome, reverse, anagrams, sliding window problems.
