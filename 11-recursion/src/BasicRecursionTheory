@@ -1,0 +1,90 @@
+/*
+
+BASIC RECURSION THEORY (JAVA DSA)
+
+1. What is Recursion?
+
+  .A function calling itself.
+  .Used to solve large problems by dividing them into smaller subproblems.
+
+2. Two Main Parts
+
+a) Base Case – The stopping condition where recursion ends.
+b) Recursive Step – The function calls itself with a smaller or reduced input.
+
+3. Why Recursion?
+
+  .Useful in Tree, Graph, Backtracking, and Divide & Conquer algorithms.
+  .Makes code simpler and more readable for self-similar problems.
+
+4. How Recursion Works (Call Stack)
+
+  .Each recursive call is pushed onto the call stack.
+  .When the base case is reached, the stack starts unwinding and returns values back.
+
+5. Example Logic (Conceptual)
+print(n):
+    //if n == 0 → stop
+    //print n;
+    //call print(n - 1);
+
+6. Important Uses
+
+  .Factorial
+  .Fibonacci
+  .Tree Traversal
+  .Depth-First Search (DFS)
+  .Permutations and Combinations
+  .Backtracking problems
+
+7. Complexity Note
+
+  .Space Complexity = Depth of recursion
+  .Time Complexity = Number of recursive calls
+
+8. Types of Recursion
+
+  .Head Recursion – Work is done after the recursive call.
+  .Tail Recursion – Work is done before the recursive call.
+  .Tree Recursion – Function calls itself multiple times (e.g., Fibonacci).
+  .Indirect Recursion – Function A calls B, and B calls A.
+
+9. When NOT to Use Recursion
+
+  .When recursion depth is too large (stack overflow risk).
+  .When the problem can be solved easily using loops.
+  .When the constraints are large and recursion becomes slow.
+
+10. Common Mistakes in Recursion
+
+  .Missing base case.
+  .Wrong recursive step.
+  .Passing the same input repeatedly (infinite recursion).
+  .Multiple recursive calls without optimization.
+
+11. Tail Recursion Note
+
+  .Java does not support tail-call optimization.
+  .Even tail-recursive functions can cause stack overflow for large inputs.
+
+12. Recurrence Relation (DSA Concept)
+
+Examples:
+  .T(n) = T(n - 1) + O(1)
+  .T(n) = 2T(n/2) + O(1)
+
+  .Used in:
+    .Merge Sort
+    .Binary Search
+    .Fibonacci
+    .Divide & Conquer algorithms
+
+13. Recursion Intuition (Easy to Remember)
+
+  .Recursion is like:
+  .A box inside another box.
+  .A mirror inside a mirror.
+  .Climbing or descending stairs one step at a time.
+
+
+*/
