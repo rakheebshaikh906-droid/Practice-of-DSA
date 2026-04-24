@@ -1,0 +1,90 @@
+Backtracking is a problem■solving technique that incrementally builds solutions and abandons them
+if they are not valid. It is generally implemented using recursion.
+-----------------------------------------
+1. DEFINITION
+-----------------------------------------
+Backtracking = Try → Explore → If wrong → Undo → Try next.
+-----------------------------------------
+2. WHY RECURSION?
+-----------------------------------------
+Each recursive call represents one choice in the search space.
+When the recursion returns, we undo the choice (backtrack).
+-----------------------------------------
+3. GENERAL BACKTRACKING TEMPLATE
+-----------------------------------------
+The universal structure:
+function backtrack(state):
+ if (goal reached):
+ record solution
+ return
+ for each valid choice:
+ make choice
+ backtrack(updated state)
+ undo choice <-- BACKTRACK
+-----------------------------------------
+4. IMPORTANT CONCEPTS
+-----------------------------------------
+Choice : What options do we have?
+Constraint : Which choices are valid?
+Goal : When is the solution complete?
+-----------------------------------------
+5. RECURSION TREE DIAGRAM
+-----------------------------------------
+A recursion tree shows how choices expand into multiple branches.
+Example: Generating subsets of [a, b]
+ {}
+ / \
+ {a} {}
+ / \ / \
+ {a,b} {a} {b} {}
+Each node represents the "current state (path)".
+Each level represents one index of the array.
+-----------------------------------------
+6. EXAMPLE: PERMUTATION TREE
+-----------------------------------------
+Permutation of "abc":
+ ""
+ / | \
+ a b c
+ / \ / \ / \
+ ab ac ba bc ca cb
+ | | | | | |
+ abc acb bac bca cab cba
+-----------------------------------------
+7. USE CASES OF BACKTRACKING
+-----------------------------------------
+• Subsets
+• Subsets with duplicates
+• Combinations
+• Permutations
+• N-Queens
+• Sudoku Solver
+• Maze problems
+• Word Search
+-----------------------------------------
+8. COMMON TIME COMPLEXITY
+-----------------------------------------
+Subsets → O(2^n)
+Permutations → O(n × n!)
+Combinations → O(C(n, k))
+Sudoku / N-Queens → Exponential
+-----------------------------------------
+9. FULL REUSABLE TEMPLATE (CODE)
+-----------------------------------------
+void backtrack(List<Integer> path, int[] nums) {
+ if (path is complete) {
+ result.add(new ArrayList<>(path));
+ return;
+ }
+ for (each choice):
+ path.add(choice); // choose
+ backtrack(path, nums); // explore
+ path.remove(path.size()-1); // undo
+}
+-----------------------------------------
+10. KEY POINTS FOR EXAMS
+-----------------------------------------
+• Backtracking uses DFS + Undo Mechanism.
+• Recursion performs branching.
+• All solutions are explored systematically.
+• Backtracking prunes invalid paths early
