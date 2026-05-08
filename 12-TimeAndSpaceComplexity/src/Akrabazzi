@@ -1,0 +1,62 @@
+*/ AkraBazzi:-
+->this is the method than we solve any divide and conquerer recurrence
+->the formula of AkraBazzi is :- T(n) = Θ( x^p+x^p* ( ∫(lower=1 to upper=n) (g(u) / u^(p+1)) du ) )
+
+What is p?
+a₁ b₁^p + a₂ b₂^p + … + aₖ bₖ^p = 1
+
+Example:
+
+T(N) = 2·T(N/2) + O(1)
+
+Here:
+
+a₁ = 2
+b₁ = 1/2
+
+So:
+
+2 × (1/2)^p = 1
+=> (1/2)^p = 1/2
+=> p = 1
+
+→ Once you find your p, substitution is easy
+→ All you need to do is put p in your Akra–Bazzi formula.
+
+T(n) = Θ( x^1+x^1 * [∫(1→n) (g(u)/u^(p+1)) du ] )
+
+p = ( log a / log (1/b) )
+p = log 2 / log 2 = 1
+
+Now evaluate the integral:
+
+g(u) = 1 (constant work per recursion)
+
+∫(1→n) (1 / u^(1+1)) du
+= ∫(1→n) (1 / u²) du
+= [ -1/u ] (1→n)
+= (-1/n) - (-1/1)
+= 1 - 1/n
+= Θ(1)
+
+So:
+
+T(n) = Θ( n^1 * (1 + Θ(1)) )
+= Θ(n)
+
+For merge sort (different g(u) = u):
+
+∫(1→n) (u / u^(p+1)) du
+= ∫(1→n) (u / u²) du
+= ∫(1→n) (1/u) du
+= ln(n)
+
+So:
+
+T(n) = Θ(n (1 + ln n))
+= Θ(n log n)
+
+Hence, merge sort complexity = Θ(n log n)
+(for array of size N)
+
+
