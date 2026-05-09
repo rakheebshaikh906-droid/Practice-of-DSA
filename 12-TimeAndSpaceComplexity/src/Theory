@@ -1,0 +1,78 @@
+TIME AND SPACE COMPLEXITY — COMPLETE THEORY NOTES
+
+1.  What is Time Complexity? Time complexity tells you how fast your
+    algorithm runs when input size (n) increases. It measures growth
+    rate, not actual seconds.
+
+2.  Why Big‑O Notation?
+
+-   Shows worst‑case performance
+-   Shows how code scales
+-   Easy algorithm comparison
+-   Big-O tells us how fast or slow an algorithm grows when the input size (n) becomes very large.
+-   It shows the worst-case time or space an algorithm will take.
+
+3.  Common Time Complexities O(1) — Constant
+    Example: Accessing arr[i], HashMap get/put.
+
+O(log n) — Logarithmic
+Example: Binary search.
+
+O(n) — Linear
+Example: Single loop.
+
+O(n log n) — Linearithmic
+Example: Merge sort, heap sort.
+
+O(n²) — Quadratic
+Example: Nested loops, bubble sort.
+
+O(n³) — Cubic
+Example: Triple nested loops.
+
+O(2ⁿ) — Exponential
+Example: Fibonacci recursion without DP.
+
+O(n!) — Factorial
+Example: Permutation generation.
+
+SPACE COMPLEXITY
+
+Space complexity measures extra memory used by an algorithm.
+
+1.  O(1) Space
+    Example: Two‑pointer, in‑place sorting.
+
+2.  O(n) Space
+    Example: Arrays, BFS queue.
+
+3.  O(log n) Space
+    Example: Balanced tree recursion, binary search recursion.
+
+4.  O(n²) Space
+    Example: 2D DP tables.
+
+Best, Worst & Average Case Best case: Minimum steps
+Worst case: Maximum steps
+Average case: Expected steps
+
+How to Calculate Time Complexity - Ignore constants - Take highest order
+term - Loops rule: Single loop → O(n)
+Nested loops → Multiply
+Consecutive loops → Add
+
+Recursion Time Complexity T(n) = T(n‑1) + O(1) → O(n)
+T(n) = 2T(n/2) + O(1) → O(n)
+T(n) = T(n‑1) + T(n‑2) → O(2ⁿ)
+
+Recursion Space Complexity Equal to recursion depth: Fibonacci recursion
+→ O(n)
+Binary search recursion → O(log n)
+
+Big‑O Cheatsheet O(1) — Constant
+O(log n) — Logarithmic
+O(n) — Linear
+O(n log n) — Linearithmic
+O(n²) — Quadratic
+O(2ⁿ) — Exponential
+O(n!) — Factorial
