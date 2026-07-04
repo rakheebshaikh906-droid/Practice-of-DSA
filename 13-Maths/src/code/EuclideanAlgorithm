@@ -1,0 +1,160 @@
+1. What is Euclidean Algorithm? (Basic Theory)
+
+Ye ek fast method hai HCF/GCD nikalne ka.
+
+Concept:
+Jab hum do numbers ko repeatedly divide karte hain aur remainder 0 ho jaaye, tab last non-zero remainder hi HCF hota hai.
+
+Mathematical Identity:
+
+HCF(a, b) = HCF(b, a % b)
+
+
+Reason:
+Agar a = b×q + r
+Toh a aur b ka HCF = b aur r ka HCF.
+
+2. Steps of Euclid’s Algorithm (Simple Method)
+
+Bade number ko chhote number se divide karo
+Remainder nikalo
+Ab (divisor, remainder) ka HCF nikaalo
+Jab remainder 0 ho jaaye → last non-zero remainder = HCF
+
+Example: HCF(42, 30)
+42 % 30 = 12
+30 % 12 = 6
+12 % 6 = 0
+
+HCF = 6
+
+3. Why Euclidean Algorithm Works? (Concept Theory)
+
+Maths rule:
+If a = bq + r then gcd(a, b) = gcd(b, r)
+
+Meaning:
+
+Remainder r wahi numbers ka HCF deta hai,
+
+Kyunki remainder r sab divisors ka combination hota hai.
+
+Isliye process repeat karne se HCF milta hi milta hai.
+
+4. Time Complexity (Advanced Theory)
+
+Euclid algorithm ** extremely fast** hota hai.
+
+Time Complexity: O(log(min(a,b)))
+
+Isliye coding me ye hi use hota hai.
+
+Worst case numbers → consecutive Fibonacci numbers
+e.g., (34, 55), (55, 89)...
+
+5. Extended Euclidean Algorithm (Advanced Level)
+
+Ye normal Euclid se bhi powerful hai.
+
+✔ It helps find:
+
+HCF
+
+x and y such that:
+
+ax + by = gcd(a, b)
+
+
+Isko Bézout’s Identity bolte hain.
+
+Example (Extended):
+
+Find x & y for
+
+gcd(30, 12)
+
+
+Normal Euclid steps:
+30 = 12×2 + 6
+12 = 6×2 + 0
+→ gcd = 6
+
+Back-substitution:
+6 = 30 - 12×2
+12 = 30 - 12×2
+
+→
+6 = 30×1 + 12×(–2)
+
+So:
+x = 1, y = –2
+
+Extended Euclid se modular inverse bhi nikalta hai.
+
+6. Modular Multiplicative Inverse (Very Advanced)
+
+If we want:
+
+a⁻¹ mod m
+
+
+Condition:
+
+gcd(a, m) = 1
+
+
+Extended Euclid se directly x milta hai:
+
+ax + my = 1
+→ x is modular inverse
+
+
+Example:
+Find inverse of 3 mod 11
+3x ≡ 1 (mod 11)
+
+Extended Euclid deta hai x = 4
+3×4 = 12 = 1 mod 11
+→ Inverse = 4
+
+7. Euclid + LCM Formula (Useful Facts)
+
+HCF × LCM = a × b
+
+Euclid se jab HCF mil jaaye
+→ LCM = (a × b) / HCF
+
+8. Euclidean Algorithm for 3 Numbers
+
+HCF(a, b, c):
+
+First → HCF(a, b)
+
+Then → HCF(result, c)
+
+Example:
+HCF(60, 24, 36)
+HCF(60,24)=12
+HCF(12,36)=12
+→ Final = 12
+
+9. Euclid’s Algorithm Characteristics (Mini-Theory)
+
+✔ Always reduces numbers
+✔ Always terminates
+✔ Fastest HCF method
+✔ Used in:
+
+Cryptography
+
+Number theory
+
+Algorithms
+
+Competitive programming
+
+10. Euclid Algorithm (Short Tricks)
+
+If numbers are consecutive → HCF = 1
+If one number divides another → HCF = smaller
+If both are prime → HCF = 1
