@@ -1,0 +1,99 @@
+HCF / GCD – Full Theory
+1. What is HCF / GCD?
+
+HCF → Highest Common Factor
+
+GCD → Greatest Common Divisor
+💬 Dono same hota hai, bas naam alag hai. HCF/GCD matlab woh “sabse bada factor” jo dono numbers ko divide kare.
+
+Example:
+12 and 18 → HCF = 6
+💬 12 aur 18 ko divide karne wale numbers me sabse bada 6 hai, isiliye HCF 6.
+
+2. Methods to Find HCF
+METHOD 1: Factor Method
+
+💬 Chhota method hai, par bade numbers me time lagta hai.
+
+Example: HCF(12,18)
+Factors of 12 → 1,2,3,4,6,12
+Factors of 18 → 1,2,3,6,9,18
+Common → 1,2,3,6
+→ HCF = 6
+
+💬 Bas common factors me sabse bada number hi HCF hota.
+
+METHOD 2: Prime Factorization
+
+💬 Ye method maths exam me best hota hai. Har number ko prime factors me todte hain.
+
+24 = 2³ × 3
+36 = 2² × 3²
+
+Common: 2² × 3 = 12
+
+💬 Common prime factors ki minimum powers lete hain, isiliye 2², 3¹.
+
+METHOD 3: Euclid’s Algorithm (Fastest)
+
+💬 Coding me sabse important method yahi hota. Very fast.
+
+Formula:
+HCF(a, b) = HCF(b, a % b)
+
+Example: HCF(42, 30)
+42 % 30 = 12
+30 % 12 = 6
+12 % 6 = 0
+→ HCF = 6
+
+💬 Jab remainder 0 ho jaata hai, jo last non-zero remainder hota hai woh HCF.
+
+3. Properties of HCF
+
+HCF(a,0) = a
+💬 Koi bhi number 0 ke sath hoga toh HCF woh same number hota.
+
+HCF(0,b) = b
+
+HCF(a,b) ≤ min(a,b)
+💬 HCF kabhi bhi numbers se bada nahi hota.
+
+If a divides b → HCF = a
+💬 Agar ek number dusre ka multiple ho toh chhota hi HCF.
+
+HCF × LCM = Product of numbers
+💬 Very important formula (exam favourite).
+
+Example:
+12 × 18 = 216
+HCF = 6 → LCM = 216 / 6 = 36
+
+4. HCF of 3 Numbers
+
+Example: HCF(24,36,60)
+HCF(24,36)=12
+HCF(12,60)=12
+
+💬 Step-by-step karna hota hai. Pehle do ka HCF, phir tisre ke sath.
+
+5. Shortcut Tricks
+
+Consecutive numbers → HCF = 1
+💬 Reason: Unke beech koi common factor nahi hota.
+
+Both prime → HCF = 1
+💬 Prime numbers ka koi common factor 1 ke alawa nahi hota.
+
+If one divides the other → HCF = smaller number
+💬 Jaise 15 aur 45 ka HCF = 15.
+
+6. Example Problems
+
+HCF(8,20)=4
+
+HCF(27,36)=9
+
+HCF(48,180)=12
+
+💬 Har example alag method se solve ho sakta, iss se confidence badhta.
