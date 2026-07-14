@@ -1,0 +1,72 @@
+*Abstract Class
+An abstract class is a class that:
+
+Cannot be instantiated (you cannot create its object)
+Can have abstract methods (methods without body)
+Can also have normal methods, variables, and constructors
+
+ It works as a blueprint for other classes.
+
+Abstract Method
+
+An abstract method:
+Uses the abstract keyword
+Has no method body
+Must be implemented by the child class
+
+abstract void show();
+
+Syntax of Abstract Class
+abstract class Animal {
+
+    abstract void sound();   // abstract method
+
+    void sleep() {            // normal method
+        System.out.println("Animal is sleeping");
+    }
+}
+
+Child Class Implementation
+class Dog extends Animal {
+
+    void sound() {
+        System.out.println("Dog barks");
+    }
+
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        d.sound();
+        d.sleep();
+    }
+}
+
+Important Points (Exam Use)
+
+You cannot create an object of an abstract class
+Animal a = new Animal(); // Error
+
+
+An abstract class can contain:
+
+abstract methods
+non-abstract methods
+variables
+
+constructors
+
+If a child class does not implement all abstract methods,
+the child class must also be declared abstract
+
+abstract and final cannot be used together
+
+Abstract Class vs Interface (Short)
+Abstract Class	Interface
+Methods with body allowed	Methods are abstract by default
+Instance variables allowed	Variables are public static final
+Constructor allowed	Constructor not allowed
+Multiple inheritance No	Multiple inheritance Yes
+
+When to Use Abstract Class?
+
+When you want a base class
+When some methods should have implementation and some should be forced on child classes
