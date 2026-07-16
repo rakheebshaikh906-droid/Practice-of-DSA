@@ -1,0 +1,68 @@
+Access Control (in Java) means controlling who can access classes, methods, variables, and constructors.
+This is done using access modifiers.
+
+Why Access Control is needed
+
+Protect data from unauthorized access
+Increase security
+Support encapsulation
+Control visibility of class members
+
+Access Modifiers in Java
+Modifier	Same Class	Same Package	Subclass (other pkg)	Other Classes
+private     	✔	        ✘	               ✘	                 ✘
+default 	    ✔	        ✔	               ✘	                 ✘
+protected	    ✔	        ✔	               ✔	                 ✘
+public	        ✔	        ✔	               ✔	                 ✔
+
+
+1. private
+Accessible only inside the same class
+Used to hide data
+
+class Test {
+    private int x = 10;
+
+    private void show() {
+        System.out.println(x);
+    }
+}
+
+2. default (package-private)
+No keyword used
+Accessible within same package only
+
+class Sample {
+    int a = 5;   // default
+
+    void display() {
+        System.out.println(a);
+    }
+}
+
+3. protected
+Accessible in same package
+Accessible in subclasses outside package
+
+class Parent {
+    protected int data = 100;
+}
+
+4. public
+Accessible from anywhere
+
+public class Demo {
+    public int value = 20;
+
+    public void show() {
+        System.out.println(value);
+    }
+}
+
+Real-life Example
+
+Think of a bank account:
+private → ATM PIN
+default → Bank staff
+protected → Branch managers
+public → Bank name
