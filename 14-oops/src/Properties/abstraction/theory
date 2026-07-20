@@ -1,0 +1,99 @@
+*Abstraction
+
+Definition:
+Abstraction is the process of hiding implementation details and showing only essential features to the user.
+
+In simple words:
+What to do is shown, how to do is hidden.
+
+Why Abstraction is needed
+
+Reduces complexity
+Improves security
+Makes code easy to maintain
+Supports loose coupling
+How abstraction is achieved in Java
+
+Java supports abstraction using:
+
+Abstract class
+Interface
+
+1) Abstraction using Abstract Class
+Rules
+
+Abstract class is declared using abstract keyword
+
+It can have:
+
+Abstract methods (no body)
+Normal methods (with body)
+Object of abstract class cannot be created
+
+Example
+abstract class Vehicle {
+
+    abstract void start();   // abstract method
+
+    void fuel() {            // normal method
+        System.out.println("Vehicle needs fuel");
+    }
+}
+
+class Bike extends Vehicle {
+
+    void start() {
+        System.out.println("Bike starts with kick");
+    }
+
+    public static void main(String[] args) {
+        Vehicle v = new Bike();
+        v.start();
+        v.fuel();
+    }
+}
+
+2) Abstraction using Interface
+Rules
+
+Interface uses interface keyword
+
+All methods are public and abstract by default
+
+Supports multiple inheritance
+
+Variables are public static final
+
+Example
+interface Bank {
+    void rateOfInterest();
+}
+
+class SBI implements Bank {
+
+    public void rateOfInterest() {
+        System.out.println("SBI rate is 6.5%");
+    }
+
+    public static void main(String[] args) {
+        Bank b = new SBI();
+        b.rateOfInterest();
+    }
+}
+
+Real-life Example
+
+ATM machine:
+
+User sees only options (withdraw, deposit)
+
+Internal process is hidden
+→ This is abstraction
+
+Difference: Abstract Class vs Interface
+Feature	      Abstract Class	       Interface
+1)Methods	 Abstract + Normal	      Only abstract
+2)Variables	     Normal	           public static final
+3)Multiple         No                     yes
+inheritance
+4)Keyword	    abstract	             interface
