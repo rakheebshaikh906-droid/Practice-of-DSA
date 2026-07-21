@@ -1,0 +1,89 @@
+*INHERITANCE:
+
+Inheritance is an Object-Oriented Programming concept in which one class acquires the properties and methods of another class.
+The class whose properties are inherited is called the Parent class (Super class).
+The class which inherits the properties is called the Child class (Sub class).
+
+Inheritance represents an IS-A relationship.
+
+*WHY INHERITANCE IS USED
+
+1)Code reusability
+2)Avoids duplication of code
+3)Easy maintenance
+4)Improves program structure
+5)Supports method overriding
+
+*SYNTAX OF INHERITANCE IN JAVA
+
+class ChildClass extends ParentClass {
+// body
+}
+
+*EXAMPLE OF INHERITANCE
+
+class Parent {
+int x = 10;
+
+void show() {
+    System.out.println("This is parent class");
+  }
+}
+
+class Child extends Parent {
+
+void display() {
+    System.out.println("Value of x = " + x);
+}
+
+public static void main(String[] args) {
+    Child obj = new Child();
+    obj.show();     // parent method
+    obj.display();  // child method
+  }
+}
+
+OUTPUT
+
+This is parent class
+Value of x = 10
+
+*IMPORTANT POINTS
+
+1)The extends keyword is used to achieve inheritance in Java
+2)Child class can access public and protected members of parent class
+3)Java supports single inheritance using classes
+4)Multiple inheritance is not supported using classes due to ambiguity
+
+*TYPES OF INHERITANCE IN JAVA
+
+1)Single Inheritance
+2)Multilevel Inheritance
+3)Hierarchical Inheritance
+
+* super()
+
+Notice that super() is passed an object of type BoxWeight—not of type Box.This still invokes the constructor Box(Box ob).
+NOTE: A superclass variable can be used to reference any object derived from that class.
+Thus, we are able to pass a BoxWeight object to the Box constructor.Of course,Box only has knowledge of its own members.
+
+A Second Use for super
+The second form of super acts somewhat like this, except that it always refers to the superclass of the subclass in
+which it is used.
+
+super.member
+
+Here, member can be either a method or an instance variable. This second form of super is most applicable to situations
+in which member names of a subclass hide members by the same name in the superclass.
+
+super( ) always refers to the constructor in the closest superclass. The super( ) in BoxPrice calls the constructor in
+BoxWeight. The super( ) in BoxWeight calls the constructor in Box. In a class hierarchy, if a superclass constructor
+requires parameters, then all subclasses must pass those parameters “up the line.” This is true whether or not a
+subclass needs parameters of its own.
+
+If you think about it, it makes sense that constructors complete their execution in order of derivation.
+Because a superclass has no knowledge of any subclass, any initialization it needs to perform is separate from and
+possibly prerequisite to any initialization performed by the subclass. Therefore, it must complete its execution first.
+
+NOTE: If super( ) is not used in subclass' constructor, then the default or parameterless constructor of each superclass
+will be executed.
