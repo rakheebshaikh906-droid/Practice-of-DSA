@@ -1,0 +1,47 @@
+*Encapsulation
+
+Definition:
+Encapsulation is the process of wrapping data (variables) and methods into a single unit and protecting data using access modifiers.
+
+In simple words:
+Data is hidden and accessed only through methods.
+
+Why Encapsulation is needed
+
+Protects data from unauthorized access
+Improves security
+Improves maintainability
+Controls how data is modified
+
+How Encapsulation is achieved in Java
+
+Encapsulation is achieved by:
+Declaring variables as private
+Providing public getter and setter methods
+
+Rules of Encapsulation
+
+Data members should be private
+Methods to access data should be public
+Access data using methods, not directly
+
+Example (Theory explanation)
+class Student {
+
+    private int age;   // data hiding
+
+    public void setAge(int a) {
+        age = a;
+    }
+
+    public int getAge() {
+        return age;
+    }
+}
+
+Key Points
+
+private → hides data
+public → controlled access
+Getter → read data
+Setter → modify data
