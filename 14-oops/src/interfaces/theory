@@ -1,0 +1,53 @@
+*Interface (Java)
+
+What is an Interface?
+
+An interface in Java is a blueprint of a class.
+It tells what to do, but not how to do it.
+
+In an interface:
+
+Methods are abstract by default (no body)
+Variables are public, static, and final by default
+
+Why do we use Interface?
+Interfaces are used to:
+
+Achieve abstraction (hide implementation details)
+Support multiple inheritance
+Provide a common standard for different classes
+Reduce dependency between classes (loose coupling)
+
+Key Points of Interface
+
+Interface cannot have object creation
+Interface cannot have constructors
+A class implements an interface
+
+One class can implement multiple interfaces
+
+Methods in interface must be implemented in the class
+
+Interface vs Abstract Class (Short Difference)
+Interface	Abstract Class
+Uses interface keyword	Uses abstract class
+Only abstract methods (before Java 8)	Can have abstract + concrete methods
+Supports multiple inheritance	Does NOT support multiple inheritance
+No constructor	Can have constructor
+Multiple Inheritance using Interface
+
+Java does not allow multiple inheritance using classes,
+but it allows multiple inheritance using interfaces.
+
+This avoids ambiguity problems like the Diamond Problem.
+
+Real-Life Example (Concept)
+
+Think of an interface like:
+
+Remote → defines buttons
+
+TV / AC → implements buttons in its own way
+
+Remote says what buttons exist,
+TV decides what happens when button is pressed.
