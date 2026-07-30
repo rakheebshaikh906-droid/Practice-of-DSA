@@ -1,0 +1,120 @@
+ * Linked List Theory
+ *
+ * =========================
+ * 1. What is a Linked List?
+ * =========================
+ * A Linked List is a linear data structure where elements (nodes)
+ * are not stored contiguously in memory.
+ *
+ * Each node contains:
+ *  - data
+ *  - reference (pointer) to the next node
+ *
+ * class Node {
+ *     int data;
+ *     Node next;
+ * }
+ *
+ * =========================
+ * 2. Array vs Linked List
+ * =========================
+ * Array:
+ *  - Fixed size
+ *  - Contiguous memory
+ *  - Fast access O(1)
+ *  - Insert/Delete costly
+ *
+ * Linked List:
+ *  - Dynamic size
+ *  - Non-contiguous memory
+ *  - Access O(n)
+ *  - Insert/Delete easy
+ *
+ * =========================
+ * 3. Types of Linked Lists
+ * =========================
+ * 1) Singly Linked List
+ *    data -> next
+ *
+ * 2) Doubly Linked List
+ *    prev <- data -> next
+ *
+ * 3) Circular Linked List
+ *    last node points to head
+ *
+ * =========================
+ * 4. Basic Operations
+ * =========================
+ *
+ * Traversal:
+ * while (temp != null) {
+ *     temp = temp.next;
+ * }
+ *
+ * Insertion at beginning:
+ * newNode.next = head;
+ * head = newNode;
+ *
+ * Insertion at end:
+ * tail.next = newNode;
+ * tail = newNode;
+ *
+ * Deletion at beginning:
+ * head = head.next;
+ *
+ * =========================
+ * 5. Fast & Slow Pointer
+ * =========================
+ * Used for:
+ *  - Find middle
+ *  - Detect cycle
+ *
+ * while (fast != null && fast.next != null) {
+ *     slow = slow.next;
+ *     fast = fast.next.next;
+ * }
+ *
+ * =========================
+ * 6. Important Problems
+ * =========================
+ * - Reverse Linked List
+ * - Find Middle
+ * - Detect Cycle (Floyd)
+ * - Remove Nth Node from End
+ * - Merge Two Sorted Lists
+ * - Palindrome Linked List
+ * - Odd Even Linked List
+ * - Add Two Numbers (LC 2 & 445)
+ *
+ * =========================
+ * 7. Dummy Node Technique
+ * =========================
+ * ListNode dummy = new ListNode(0);
+ * ListNode temp = dummy;
+ *
+ * Helps avoid edge cases with head.
+ *
+ * =========================
+ * 8. Time Complexity
+ * =========================
+ * Traversal: O(n)
+ * Insert/Delete (known node): O(1)
+ * Search: O(n)
+ * Reverse: O(n)
+ *
+ * =========================
+ * 9. Common Mistakes
+ * =========================
+ * - Forgetting null checks
+ * - Using || instead of &&
+ * - Losing head reference
+ * - Creating cycles accidentally
+ *
+ * =========================
+ * 10. Golden Rules
+ * =========================
+ * - Always draw pointers
+ * - Change links before moving pointers
+ * - Handle edge cases first
+ *
+ */
