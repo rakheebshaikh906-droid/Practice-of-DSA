@@ -1,0 +1,150 @@
+*STACK AND QUEUE
+
+PART 1: STACK
+1. Definition of Stack
+A stack is a linear data structure that follows the principle:
+
+LIFO (Last In, First Out)
+The element inserted last is removed first.
+
+2. Stack Terminology
+
+Top: Points to the most recently inserted element
+Overflow: Condition when stack is full and insertion is attempted
+Underflow: Condition when stack is empty and deletion is attempted
+
+3. Stack Operations
+
+Push: Insert an element at the top
+Pop: Remove the top element
+Peek / Top: View the top element
+isEmpty / isFull
+
+Time Complexity for all operations: O(1)
+
+4. Stack Implementation
+
+Array implementation
+Linked list implementation
+Dynamic array implementation
+
+5. Types of Stack
+
+Simple Stack
+Dynamic Stack
+Multiple Stack
+Min Stack
+
+Monotonic Stack (Increasing / Decreasing)
+
+6. Applications of Stack
+
+Function calls (Call Stack)
+Expression evaluation
+syntax parsing
+Undo and Redo operations
+Backtracking algorithms
+Depth First Search (DFS)
+Reversal of data
+
+7. Expression Handling Using Stack
+
+Infix to Postfix conversion
+Infix to Prefix conversion
+Postfix expression evaluation
+Parenthesis matching
+
+8. Stack in Memory Management
+
+Each function call creates a stack frame that stores:
+Local variables
+Function parameters
+Return address
+Excessive recursion can cause stack overflow.
+
+9. Advantages and Limitations of Stack
+
+Advantages
+
+Simple and fast operations
+Efficient memory usage
+Useful for recursive problems
+
+Limitations
+
+No random access
+Limited access to elements
+Fixed size in array implementation
+
+PART 2: QUEUE
+1. Definition of Queue
+
+A queue is a linear data structure that follows:
+
+FIFO (First In, First Out)
+the element inserted first is removed first.
+
+2. Queue Terminology
+
+Front: Position from which elements are removed
+Rear: Position where elements are inserted
+Overflow: Queue is full
+Underflow: Queue is empty
+
+3. Queue Operations
+
+Enqueue: Insert element at the rear
+Dequeue: Remove element from the front
+Front / Rear
+isEmpty / isFull
+
+Time Complexity for all operations: O(1)
+
+4. Queue Implementation
+
+Array implementation
+Linked list implementation
+Circular array implementation
+
+5. Types of Queue
+
+Simple Queue
+Circular Queue
+Priority Queue
+Deque (Double Ended Queue)
+
+6. Applications of Queue
+
+CPU scheduling
+Disk scheduling
+Printer management
+Breadth First Search (BFS)
+Sliding window problems
+Order processing systems
+
+7. Queue in Operating Systems
+
+Ready queue
+Waiting queue
+I/O queue
+Job scheduling
+
+8. Advanced Queue Variants
+
+Monotonic Queue
+Circular Deque
+Blocking Queue (Multithreading)
+
+9. Advantages and Limitations of Queue
+
+Advantages
+
+Fair processing order
+Efficient scheduling
+Easy to implement
+
+Limitations
+
+No random access
+Fixed size in array implementation
+Slightly complex advanced variants
