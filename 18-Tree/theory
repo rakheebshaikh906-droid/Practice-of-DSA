@@ -1,0 +1,183 @@
+1. What is a Binary Tree?
+
+A Binary Tree is a non-linear data structure in which each node can have at most two children, referred to as the left child and the right child.
+Binary trees are used to represent hierarchical relationships.
+
+2. Basic Terminology
+
+Node
+The basic unit of a tree that contains data.
+
+Root
+The topmost node of the tree.
+
+Parent
+A node that has one or more children.
+
+Child
+A node that descends from a parent node.
+
+Leaf Node
+A node with no children.
+
+Internal Node
+A node with at least one child.
+
+Edge
+The connection between two nodes.
+
+Height
+The maximum number of edges from a node to the deepest leaf.
+
+Depth
+The number of edges from the root to a node.
+
+Level
+Depth + 1
+
+3. Structure of a Binary Tree
+
+Each node contains:
+
+Data
+Reference to left child
+Reference to right child
+
+4. Types of Binary Trees
+
+Full Binary Tree:
+Every node has either 0 or 2 children.
+No node has only one child.
+
+Perfect Binary Tree:
+All internal nodes have exactly 2 children and all leaf nodes are at the same level.
+Total nodes = 2^h − 1
+
+Complete Binary Tree:
+All levels are completely filled except possibly the last level.
+The last level is filled from left to right.
+Used in Heap.
+
+Skewed Binary Tree:
+Every node has only one child.
+Can be left-skewed or right-skewed.
+Worst case for performance.
+
+Balanced Binary Tree:
+The height difference between left and right subtree is not more than 1.
+Improves efficiency.
+
+5. Binary Tree vs Binary Search Tree (BST)
+
+Binary Tree
+
+No ordering rule
+Searching is slow
+
+Binary Search Tree
+
+Left subtree contains smaller values
+Right subtree contains greater values
+Searching is fast
+
+6. Tree Traversals
+
+Traversal means visiting all nodes of the tree.
+
+Preorder Traversal
+Root → Left → Right
+Used for copying trees and prefix expressions.
+
+Inorder Traversal
+Left → Root → Right
+In BST, inorder traversal gives sorted order.
+
+Postorder Traversal
+Left → Right → Root
+Used for deleting trees and expression evaluation.
+
+Level Order Traversal
+Traverses level by level using Queue.
+Also called Breadth First Search (BFS).
+
+7. Height of Binary Tree
+
+Height is the maximum number of edges from the root to the deepest leaf node.
+
+Worst case time complexity: O(n)
+Balanced tree time complexity: O(log n)
+
+8. Properties of Binary Tree
+
+Maximum nodes at level L = 2^L
+Maximum nodes in a binary tree of height H = 2^(H+1) − 1
+Minimum height for N nodes = log₂(N)
+Number of edges = Number of nodes − 1
+
+9. Representation of Binary Tree
+
+Linked Representation
+Each node contains data and references to left and right child.
+
+Array Representation
+Used in Complete Binary Tree.
+
+Index relationships:
+Parent = (i − 1) / 2
+Left child = 2i + 1
+Right child = 2i + 2
+
+10. Basic Operations on Binary Tree
+
+Insertion
+Deletion
+Traversal
+Finding height
+Counting nodes
+Counting leaf nodes
+Mirror of tree
+Checking symmetry
+
+11. Diameter of Binary Tree
+
+Diameter is the longest path between any two nodes in the tree.
+The path may or may not pass through the root.
+
+Optimized time complexity: O(n)
+
+12. Binary Tree vs Heap vs BST
+
+Binary Tree
+No ordering, general structure.
+
+Heap
+Complete Binary Tree with heap property.
+Used in priority queues.
+
+BST
+Ordered structure for fast searching.
+
+13. Applications of Binary Tree
+
+File systems
+Compiler syntax trees
+Expression evaluation
+Artificial Intelligence
+Operating systems
+Database indexing
+
+14. Interview Important Points
+
+Binary Tree is a non-linear data structure.
+Maximum children per node is two.
+Inorder traversal of BST gives sorted order.
+Skewed tree gives worst case performance.
+Complete Binary Tree is used in Heap.
+
+15. When to Use Binary Tree?
+
+When hierarchical data representation is required.
+When parent-child relationship exists.
+When recursive solutions are efficient.
+
+END
