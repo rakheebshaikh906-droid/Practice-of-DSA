@@ -1,0 +1,55 @@
+//https://leetcode.com/problems/find-the-largest-almost-missing-integer/description/?envType=daily-question&envId=2026-08-18
+//3471. Find the Largest Almost Missing Integer
+
+class Solution {
+    public int largestInteger(int[] nums, int k) {
+        int n=nums.length;
+        int Allmax=0;
+        for(int num : nums){
+            Allmax=Math.max(Allmax,num);
+        }
+        int Onemax=-1;
+        for(int i=0;i<nums.length;i++){
+            int count=0;
+            for(int j=0;j<nums.length;j++){
+                if(nums[i]==nums[j]){
+                    count++;
+                }
+            }
+            if(count==1){
+                Onemax=Math.max(Onemax,nums[i]);
+            }
+        }
+        if(k==1){
+            return Onemax;
+        }
+        if(k==n){
+            return Allmax;
+        }
+        if(nums[0]==nums[n-1]){
+            return -1;
+        }
+        //frequency count 
+        int firstCount = 0;
+        int lastCount = 0;
+
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == nums[0]) {
+                firstCount++;
+            }
+            if (nums[i] == nums[nums.length - 1]) {
+                lastCount++;
+            }
+        }
+        if (firstCount == 1 && lastCount == 1) {
+            return Math.max(nums[0], nums[nums.length - 1]);
+        }
+        if (firstCount == 1 && lastCount > 1) {
+            return nums[0];
+        }
+        if (lastCount == 1 && firstCount > 1) {
+            return nums[nums.length - 1];
+        }
+        return -1;
+    }
+}
