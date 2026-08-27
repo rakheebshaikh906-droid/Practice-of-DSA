@@ -1,0 +1,157 @@
+=============================
+COMPLETE HASHMAP vs HASHTABLE THEORY
+=============================
+
+1. HASHING
+Hashing is a technique used to store data in key-value pairs.
+A hash function converts a key into an integer index.
+This index decides where the value will be stored in the array.
+
+Goal:
+Fast insertion, deletion and search (O(1) average).
+
+--------------------------------------------------
+
+2. HASHMAP (java.util.HashMap)
+
+Definition:
+HashMap is a class that implements Map interface and stores key-value pairs.
+
+Features:
+- Allows one null key
+- Allows multiple null values
+- Not synchronized (Not thread-safe)
+- Does not maintain order
+- Faster than Hashtable
+- Default capacity = 16
+- Default load factor = 0.75
+
+--------------------------------------------------
+
+3. INTERNAL WORKING OF HASHMAP
+
+Step 1: hashCode() is called on key.
+Step 2: Hash value is processed (hash spreading).
+Step 3: Index calculated using:
+        index = (n - 1) & hash
+        (n must be power of 2)
+
+Step 4: If bucket empty → insert.
+Step 5: If collision:
+        - Compare keys using equals()
+        - If same key → replace value
+        - Else → add to LinkedList
+
+Java 8 Improvement:
+If bucket size >= 8 AND capacity >= 64
+→ LinkedList converts to Red-Black Tree.
+This improves worst-case time from O(n) to O(log n).
+
+--------------------------------------------------
+
+4. TIME COMPLEXITY
+
+Operation     Average      Worst (Java 8+)
+put()         O(1)         O(log n)
+get()         O(1)         O(log n)
+remove()      O(1)         O(log n)
+
+Before Java 8 worst case = O(n)
+
+--------------------------------------------------
+
+5. LOAD FACTOR
+
+Load Factor = size / capacity
+
+Default = 0.75
+
+Threshold = capacity × load factor
+Example:
+16 × 0.75 = 12
+
+If entries > 12 → Rehashing occurs.
+
+--------------------------------------------------
+
+6. REHASHING
+
+When threshold crossed:
+- Capacity doubles (16 → 32 → 64)
+- New array created
+- All elements reinserted
+
+Time complexity during rehash = O(n)
+
+--------------------------------------------------
+
+7. HASHCODE & EQUALS CONTRACT
+
+Rule 1:
+If two objects are equal (equals() returns true)
+→ Their hashCode() must be same.
+
+Rule 2:
+If hashCode same → objects may or may not be equal.
+
+If equals overridden but hashCode not overridden
+→ HashMap may behave incorrectly.
+
+--------------------------------------------------
+
+8. FAIL-FAST BEHAVIOR
+
+HashMap iterator is fail-fast.
+If structure modified during iteration
+→ ConcurrentModificationException thrown.
+
+--------------------------------------------------
+
+9. HASHTABLE (java.util.Hashtable)
+
+Definition:
+Legacy class introduced in Java 1.0.
+
+Features:
+- No null key allowed
+- No null value allowed
+- Synchronized (Thread-safe)
+- Slower than HashMap
+- Legacy (rarely used today)
+
+--------------------------------------------------
+
+10. HASHMAP vs HASHTABLE
+
+Feature            HashMap         Hashtable
+--------------------------------------------------
+Thread Safe        No              Yes
+Null Key           Allowed (1)     Not Allowed
+Null Value         Allowed         Not Allowed
+Performance        Faster          Slower
+Introduced         Java 1.2        Java 1.0
+Iterator           Fail-Fast       Enumerator
+
+--------------------------------------------------
+
+11. WHY CAPACITY IS POWER OF 2?
+
+Because index calculation:
+(n - 1) & hash
+
+Bitwise AND works efficiently when n is power of 2.
+It distributes keys uniformly.
+
+--------------------------------------------------
+
+12. MODERN ALTERNATIVE
+
+Instead of Hashtable use:
+ConcurrentHashMap
+
+It provides thread safety with better performance.
+
+--------------------------------------------------
+
+END OF THEORY
+=============================
